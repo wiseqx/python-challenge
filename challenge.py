@@ -29,7 +29,7 @@ with open('Unit3 - Python_Homework_PyPoll_Resources_election_data.csv','r') as c
             percentage_of_vote='{:.3%}'.format(float(vote_dict[str(name)][0]/total_vote))
             vote_dict[str(name)].append(percentage_of_vote)
 
-
+    #print info and write to a new text file
     with open("PyPoll_result.txt","w") as output_file:
         #first two lines
         title='Election Results \n'+"-"*30+"\n"+"Total Votes: "+str(total_vote)+"\n"+"-"*30+"\n"
