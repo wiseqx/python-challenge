@@ -1,9 +1,13 @@
 import csv
+import os
 
 row_count=0
 candidates_list=[]
 vote_dict={}
-with open('Unit3 - Python_Homework_PyPoll_Resources_election_data.csv','r') as csvfile:
+
+pypoll_csv = os.path.join("../", "Unit3 - Python_Homework_PyPoll_Resources_election_data.csv")
+
+with open(pypoll_csv,'r') as csvfile:
     csv_reader = csv.reader(csvfile)
     next(csv_reader,None)
     for row in csv_reader:

@@ -1,4 +1,5 @@
 import csv
+import os
 
 months=[]
 total_amount=0
@@ -6,8 +7,9 @@ max_amount=0
 min_amount=0
 profit_change=[]
 
+pybank_csv = os.path.join("../", "Unit3 - Python_Homework_PyBank_Resources_budget_data.csv")
 
-with open('Unit3 - Python_Homework_PyBank_Resources_budget_data.csv','r') as csvfile:
+with open(pybank_csv,'r') as csvfile:
     csv_reader = csv.reader(csvfile)
     #skip header
     next(csv_reader,None)
